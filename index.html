@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <svg width="80" height="80">
+                <rect x="10" y="10" rx="10" ry="10" width="50" height="50"
+                    style=" fill:none;stroke:maroon;stroke-width:5" />
+                <rect x="20" y="22" rx="5" ry="5" width="15" height="25"
+                    style=" fill:none;stroke:maroon;stroke-width:3" />
+                <rect x="35" y="22" rx="5" ry="5" width="15" height="25"
+                    style=" fill:none;stroke:maroon;stroke-width:3" />
+            </svg>
+            <a class="navbar-brand" href="#">The Book Basement</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link tablink" href="#" onclick="openPage('Home', this)" id="defaultOpen"
+                            accesskey="h">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tablink" href="#" onclick="openPage('Books', this)" accesskey="b">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tablink" href="#" onclick="openPage('About', this)" accesskey="a">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tablink" href="#" onclick="openPage('signup', this)" accesskey="s">Sign
+                            Up</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="Home" class="tabcontent">
+        <section class="hero-banner py-5 text-light">
+            <div class="container">
+                <div class="row row align-items-center">
+                    <div class="col-lg-5 offset-lg-1 order-lg-1">
+                        <img src="./img/bookhero.jpg" class="img-fluid" alt="stack of colourful books">
+                    </div>
+                    <div class="col-lg-6 text-light">
+                        <h1 class="mt-3 mb-4 ">The Book Basement</h1>
+                        <svg width="100" height="80">
+                            <line x1="0" y1="0" x2="800" y2="00" style="stroke:#FFBF00;stroke-width:5" />
+                        </svg>
+                        <p class="lead my-5" id="hero-text">From classic children's stories, to dystopian
+                            nightmares -
+                            there's a reason we only stock the most popular books of all time</p>
+                        <a href="#" class="btn btn-outline-light btn-lg border" onclick="openPage('Books', this)">Browse
+                            Books</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </section>
+
+    <section id="Books" class="tabcontent">
+        <div class="container">
+            <h1 class="mt-3 mb-4 text-light">Our Books</h1>
+            <svg width="100" height="80">
+                <line x1="0" y1="0" x2="800" y2="00" style="stroke:#FFBF00;stroke-width:5" />
+            </svg>
+            <div class="row align-items-start">
+                <div class="col m-2 p-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/don-quixote.jpg" class="card-img-top"
+                            alt="Book cover for Don Quixote depicting a man on a horse">
+                        <div class="card-body">
+                            <h5 class="card-title">Don Quixote</h5>
+                            <p class="card-text">Michael de Cervantes.</p>
+                            <a href="#" class="btn btn-primary text-light tablink"
+                                onclick="readMore('book1', this)">Read More</a>
+
+                            <div id="book1" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <input type="button" value="x" onclick="closeBook1()">
+                                    <h3>Don Quixote</h3>
+                                    <h4>Michael de Cervantes</h4>
+                                    <p>Don Quixote has become so entranced by reading chivalric
+                                        romances that he
+                                        determines to become a knight-errant himself. In the company
+                                        of his faithful
+                                        squire, Sancho Panza, his exploits blossom in all sorts of
+                                        wonderful ways. While
+                                        Quixote's fancy often leads him astray—he tilts at
+                                        windmills, imagining them to
+                                        be giants—Sancho acquires cunning and a certain sagacity.
+                                        Sane madman and wise
+                                        fool, they roam the world together, and together they have
+                                        haunted readers'
+                                        imaginations for nearly four hundred years.</p>
+
+                                    <p>With its experimental form and literary playfulness, Don
+                                        Quixote has been
+                                        generally recognized as the first modern novel. The book has
+                                        been enormously
+                                        influential on a host of writers, from Fielding and Sterne
+                                        to Flaubert, Dickens,
+                                        Melville, and Faulkner, who reread it once a year, "just as
+                                        some people read the
+                                        Bible."</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col m-2 p-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/two-cities.jpg" class="card-img-top"
+                            alt="A Tale of Two Cities book cover, depicting a group of people in a hall">
+                        <div class="card-body">
+                            <h5 class="card-title">A Tale of Two Cities</h5>
+                            <p class="card-text">Charles Dickens</p>
+                            <a href="#" class="btn btn-primary tablink text-light"
+                                onclick="readMore('book2', this)">Read More</a>
+                            <div id="book2" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <input type="button" value="x" onclick="closeBook2()">
+                                    <h3>A Tale of Two Cities</h3>
+                                    <h4>Charles Dickens</h4>
+                                    <p>A Tale of Two Cities is Charles Dickens’s great historical novel, set against the
+                                        violent upheaval of the French Revolution. The most famous and perhaps the most
+                                        popular of his works, it compresses an event of immense complexity to the scale
+                                        of a family history, with a cast of characters that includes a bloodthirsty
+                                        ogress and an antihero as believably flawed as any in modern fiction. Though the
+                                        least typical of the author’s novels, A Tale of Two Cities still underscores
+                                        many of his enduring themes—imprisonment, injustice, social anarchy,
+                                        resurrection, and the renunciation that fosters renewal.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col m-2 p-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/lotr.jpg" class="card-img-top"
+                            alt="Lord of the rings book cover, depicting a druidic eye">
+                        <div class="card-body">
+                            <h5 class="card-title">The Lord of the Rings</h5>
+                            <p class="card-text">J.R.R Tolkien</p>
+                            <a href="#" class="btn btn-primary tablink text-light"
+                                onclick="readMore('book3', this)">Read More</a>
+                            <div id="book3" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <input type="button" value="x" onclick="closeBook3()">
+                                    <h3>The Lord of the Rings</h3>
+                                    <h4>J.R.R Tolkien</h4>
+                                    <p><i>One Ring to rule them all, One Ring to find them, One Ring to
+                                            bring them all and in the darkness bind them</i></p>
+
+                                    <p>In ancient times the Rings of Power were crafted by the
+                                        Elven-smiths, and Sauron, the Dark Lord, forged the One Ring,
+                                        filling it with his own power so that he could rule all others.
+                                        But the One Ring was taken from him, and though he sought it
+                                        throughout Middle-earth, it remained lost to him. After many
+                                        ages it fell by chance into the hands of the hobbit Bilbo
+                                        Baggins.</p>
+                                    <p>From Sauron's fastness in the Dark Tower of Mordor, his power
+                                        spread far and wide. Sauron gathered all the Great Rings to him,
+                                        but always he searched for the One Ring that would complete his
+                                        dominion.</p>
+
+                                    <p>When Bilbo reached his eleventy-first birthday he
+                                        disappeared, bequeathing to his young cousin Frodo the
+                                        Ruling Ring and a perilous quest: to journey across
+                                        Middle-earth, deep into the shadow of the Dark Lord, and
+                                        destroy the Ring by casting it into the Cracks of Doom.</p>
+
+                                    <p>The Lord of the Rings tells of the great quest undertaken by
+                                        Frodo and the Fellowship of the Ring: Gandalf the Wizard;
+                                        the hobbits Merry, Pippin, and Sam; Gimli the Dwarf; Legolas
+                                        the Elf; Boromir of Gondor; and a tall, mysterious stranger
+                                        called Strider.</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="About" class="tabcontent">
+        <section id="about-us">
+            <div class="container">
+                <div class="row row align-items-center">
+                    <div class="col-lg-5 offset-lg-1 order-lg-1">
+                        <img src=" ./img/bookhero.jpg" class="img-fluid" alt="About Us">
+                    </div>
+                    <div class="col-lg-6 text-light">
+                        <h1 class="mt-3 mb-4">About Us</h1>
+                        <svg width="100" height="80">
+                            <line x1="0" y1="0" x2="800" y2="00" style="stroke:#FFBF00;stroke-width:5" />
+                        </svg>
+                        <p>Lorem ipsum dolor sit amet, consectetuer
+                            adipiscing elit. Donec odio. Quisque volutpat
+                            mattis
+                            eros. Nullam malesuada erat ut turpis.
+                            Suspendisse urna nibh, viverra non, semper
+                            suscipit,
+                            posuere a, pede.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer
+                            adipiscing elit. Donec odio. Quisque volutpat
+                            mattis
+                            eros. Nullam malesuada erat ut turpis.
+                            Suspendisse urna nibh, viverra non, semper
+                            suscipit,
+                            posuere a, pede.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="tabcontent" id="signup">
+        <section id="intro">
+            <div class="form-container">
+
+                <div class="form-box">
+
+                    <h1 class="title">Join The Book Basement</h1>
+                    <form class="register-form" id="form" onsubmit="validate()">
+
+
+                        <fieldset>
+                            <legend>Your details</legend>
+
+                            <div class="register-box">
+                                <div class="input-box">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" placeholder="Enter your first name" class="register-input"
+                                        id="username" pattern="^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$"
+                                        oninput="checkUserName()" required>
+                                    <label for="username">Name</label>
+                                </div>
+                                <div class="error-text" id="usr-error"></div>
+                            </div>
+
+                            <div class="register-box phone">
+                                <div class=" input-box">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="text" placeholder="Enter your phone number" class="register-input"
+                                        id="phone"
+                                        pattern="^(\+?\(61\)|\(\+?61\)|\+?61|\(0[1-9]\)|0[1-9])?( ?-?[0-9]){7,9}$">
+                                    <label for="phone">Phone</label>
+                                </div>
+                                <div class="error-text"></div>
+                            </div>
+
+                            <div class="register-box">
+                                <div class="input-box">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" placeholder="Enter your email address" class="register-input"
+                                        id="email" onchange="checkEmail()" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="error-text" id="email-error">Please enter a valid email address</div>
+                            </div>
+
+                            <div class="register-box">
+                                <div class="input-box">
+                                    <i class="fas fa-key"></i>
+                                    <input type="password" placeholder="Enter your password" class="register-input"
+                                        id="password1" onchange="passwordMatch()" required>
+                                    <label for="password1">Password</label>
+                                </div>
+                            </div>
+
+
+                            <div class="register-box">
+                                <div class="input-box">
+                                    <i class="fas fa-key"></i>
+                                    <input onchange="passwordMatch()" type="password"
+                                        placeholder="Confirm your password" class="register-input" id="password2"
+                                        required>
+                                    <label for="password2">Confirm Password</label>
+                                </div>
+                                <div class="error-text" id="pass-error"></div>
+                            </div>
+
+                        </fieldset>
+
+                        <div class="register-box check">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="agree"
+                                onclick="onCheckbox()">
+                            <label class="form-check-label" for="agree">
+                                I agree to the terms and conditions
+                            </label>
+                        </div>
+
+
+                        <input type="submit" class="register-btn" id="register-btn" name="submit"
+                            value="Create Account">
+
+
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="agree"
+                        onclick="onCheckbox()">
+                    <label class="form-check-label" for="agree">
+                        I agree to the terms and conditions
+                    </label>
+                </div> -->
+        <section id="signup-modal" onclick="onBackgroundClose(event)">
+            <article>
+                <h3>Terms and Conditions</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum delectus doloribus
+                    recusandae consectetur dignissimos eligendi ullam a, ipsam numquam tenetur! Unde dolore
+                    atque eius, explicabo dolorum nemo? Nostrum, aperiam vel?</p>
+                <input type="button" value="Agree" onclick="onAgree()">
+                <input type="button" value="Disagree" onclick="onDisagree()">
+                <input type="button" value="x" id="close-button" onclick="closeModal()">
+            </article>
+        </section>
+
+    </section>
+
+
+
+</body>
+
+</html>
